@@ -1,0 +1,1648 @@
+/* ============================================================
+   MOBILE WEDDING INVITATION
+   PHONE ONLY — 700px and below
+   ============================================================ */
+
+@import url('https://fonts.googleapis.com/css2?family=DM+Sans:wght@300;400;500&family=Italiana&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500&family=DM+Sans:wght@300;400;500&display=swap');
+/* ============================================================
+   RESET
+   ============================================================ */
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  background: #eae5df;
+  color: #282522;
+  font-family: "DM Sans", sans-serif;
+  overflow-x: hidden;
+  -webkit-font-smoothing: antialiased;
+}
+
+a {
+  color: inherit;
+  text-decoration: none;
+}
+
+img {
+  display: block;
+  width: 100%;
+}
+
+:root {
+  --cream: #eae5df;
+  --dark: #25221f;
+  --white: #ffffff;
+  --serif: "Italiana", Georgia, serif;
+  --see: "Cormorant Garamond", Georgia, serif;
+  --sans: "DM Sans", sans-serif;
+}
+
+
+/* ============================================================
+   GENERAL
+   ============================================================ */
+
+.wedding-site {
+  width: 100%;
+  overflow: hidden;
+}
+
+.eyebrow {
+  font-family: var(--sans);
+  font-size: 9px;
+  font-weight: 400;
+  letter-spacing: 0.32em;
+  opacity: 0.72;
+}
+
+.vertical-line {
+  width: 1px;
+  height: 50px;
+  background: currentColor;
+  opacity: 0.35;
+  margin: 0 auto 30px;
+}
+
+
+/* ============================================================
+   NAVIGATION
+   ============================================================ */
+
+.top-navigation {
+  position: absolute;
+  z-index: 20;
+  top: 14px;
+  left: 50%;
+  transform: translateX(-50%);
+
+  width: calc(100% - 28px);
+
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+
+  padding: 12px 17px;
+
+  border: 1px solid rgba(255,255,255,0.28);
+  border-radius: 100px;
+
+  background: rgba(0,0,0,0.14);
+
+  backdrop-filter: blur(18px);
+  -webkit-backdrop-filter: blur(18px);
+
+  color: white;
+}
+
+.nav-monogram {
+  font-family: var(--serif);
+  font-size: 18px;
+  letter-spacing: 0.04em;
+}
+
+.nav-monogram span {
+  font-size: 12px;
+  margin: 0 2px;
+}
+
+.nav-menu {
+  display: none;
+}
+
+
+/* ============================================================
+   HERO
+   ============================================================ */
+
+.hero-section {
+  position: relative;
+
+  width: 100%;
+  height: 100svh;
+  min-height: 620px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.hero-photo {
+  position: absolute;
+  inset: -5%;
+
+  background-image: url("/images/hero.jpg");
+  background-size: cover;
+  background-position: center;
+}
+
+.hero-dark {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      to bottom,
+      rgba(0,0,0,0.20),
+      rgba(0,0,0,0.08) 45%,
+      rgba(0,0,0,0.68)
+    );
+}
+
+.hero-content {
+  position: relative;
+  z-index: 3;
+
+  width: 100%;
+  padding: 0 18px;
+
+  text-align: center;
+
+  margin-top: 45px;
+}
+
+.hero-intro {
+  font-size: 15px;
+  letter-spacing: 0.28em;
+  font-weight: 300;
+    font-family: 'trajan-pro-3', serif;
+}
+
+
+/* ============================================================
+   HERO TITLE
+   ============================================================ */
+
+.hero-title-wrapper {
+  width: 100%;
+  overflow: hidden;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 18px;
+  padding: 0 10px;
+ 
+}
+
+.hero-title-wrapper h1 {
+  width: 100%;
+  padding: 0;
+  margin: 0;
+
+  font-family: var(--see);
+  font-weight: 400;
+
+  /* Fixed: min (48px) is now smaller than max (92px), so it actually scales */
+  font-size: clamp(48px, 17vw, 92px);
+
+  line-height: 0.9;
+  letter-spacing: 0.04em;
+
+  text-align: center;
+  white-space: nowrap;
+}
+
+
+/* ============================================================
+   HERO COUPLE
+   ============================================================ */
+
+.hero-couple {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Playfair Display', serif;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  font-size: 20px;
+  letter-spacing: 0.28em;
+}
+
+.hero-couple i {
+  font-family: var(--serif);
+
+  font-size: 25px;
+
+  font-style: italic;
+  letter-spacing: 0;
+}
+
+.hero-date {
+  margin-top: 15px;
+  font-family: 'Lora', serif;
+  font-size: 20px;
+  letter-spacing: 0.28em;
+}
+
+.hero-scroll {
+  position: absolute;
+  z-index: 5;
+
+  bottom: 20px;
+  left: 50%;
+
+  transform: translateX(-50%);
+
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+
+  gap: 6px;
+
+  color: white;
+
+  font-size: 7px;
+  letter-spacing: 0.28em;
+}
+/* ============================================================
+   WELCOME / LOVE STORY
+   ============================================================ */
+
+.welcome-section {
+  position: relative;
+
+  min-height: 100svh;
+
+  padding: 100px 22px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.welcome-photo {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/images/welcome.jpg");
+  background-size: cover;
+  background-position: center;
+
+  transform: scale(1.04);
+}
+
+.welcome-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(25,21,18,0.52),
+      rgba(25,21,18,0.78)
+    );
+}
+
+.welcome-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 390px;
+
+  text-align: center;
+
+  padding: 25px 8px;
+}
+
+.welcome-content .vertical-line {
+  margin-bottom: 28px;
+}
+
+.welcome-content h2 {
+  margin-top: 16px;
+
+  font-family: var(--serif);
+
+  /*
+     Elegant rather than enormous.
+     This prevents LOVE STORY from
+     becoming cramped on small phones.
+  */
+  font-size: 22vw;
+
+  line-height: 0.86;
+
+  font-weight: 400;
+
+  letter-spacing: -0.055em;
+}
+
+.welcome-content h2 em {
+  font-style: italic;
+}
+
+.welcome-description {
+  max-width: 310px;
+
+  margin: 32px auto 0;
+
+  font-size: 11px;
+
+  line-height: 1.9;
+
+  opacity: 0.74;
+}
+
+
+
+
+
+/* ============================================================
+   COUNTDOWN
+   ============================================================ */
+
+.countdown-section {
+  position: relative;
+
+  min-height: 100svh;
+
+  padding: 95px 18px;
+
+  overflow: hidden;
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  color: white;
+}
+
+.countdown-photo {
+  position: absolute;
+  inset: -5%;
+
+  background-image: url("/images/countdown.jpg");
+
+  background-size: cover;
+  background-position: center;
+
+  animation:
+    slowPhotoZoom 16s ease-in-out infinite alternate;
+}
+
+@keyframes slowPhotoZoom {
+  from {
+    transform: scale(1);
+  }
+
+  to {
+    transform: scale(1.07);
+  }
+}
+
+.countdown-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    linear-gradient(
+      rgba(15,13,11,0.52),
+      rgba(15,13,11,0.78)
+    );
+}
+
+.countdown-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+  max-width: 390px;
+
+  text-align: center;
+}
+
+.countdown-content h2 {
+  margin-top: 18px;
+
+  font-family: var(--serif);
+
+  font-size: 21vw;
+
+  font-weight: 400;
+
+  line-height: 0.86;
+
+  letter-spacing: -0.055em;
+}
+
+.countdown-grid {
+  width: 100%;
+
+  margin: 42px auto 25px;
+
+  display: grid;
+
+  grid-template-columns: repeat(2, 1fr);
+
+  gap: 9px;
+}
+
+.countdown-glass {
+  position: relative;
+
+  min-height: 135px;
+
+  display: flex;
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  border:
+    1px solid rgba(255,255,255,0.2);
+
+  border-radius: 20px;
+
+  background:
+    rgba(255,255,255,0.095);
+
+  box-shadow:
+    inset 0 1px 0 rgba(255,255,255,0.18),
+    0 15px 40px rgba(0,0,0,0.18);
+
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+
+  overflow: hidden;
+}
+
+.glass-light {
+  position: absolute;
+
+  width: 120px;
+  height: 120px;
+
+  top: -70px;
+  right: -45px;
+
+  border-radius: 50%;
+
+  background: rgba(255,255,255,0.14);
+
+  filter: blur(25px);
+}
+
+.count-number {
+  position: relative;
+
+  font-family: var(--serif);
+
+  font-size: 50px;
+
+  line-height: 1;
+}
+
+.count-label {
+  margin-top: 12px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.25em;
+
+  opacity: 0.62;
+}
+
+.count-date {
+  margin-top: 20px;
+
+  font-size: 7px;
+
+  letter-spacing: 0.28em;
+
+  opacity: 0.6;
+}
+
+
+
+
+
+/* ============================================================
+   VENUES
+   ============================================================ */
+
+.venues-section {
+
+  position: relative;
+
+  min-height: auto;
+
+  padding: 95px 6% 90px;
+
+  overflow: hidden;
+
+  color: white;
+
+}
+
+
+/* ============================================================
+   BACKGROUND
+   ============================================================ */
+
+.venues-background {
+
+  position: absolute;
+
+  inset: 0;
+
+  background-image: url("/images/venue.jpg");
+
+  background-size: cover;
+
+  background-position: center;
+
+  transform: scale(1.04);
+
+}
+
+
+.venues-dark {
+
+  position: absolute;
+
+  inset: 0;
+
+  background:
+    rgba(28, 24, 20, 0.68);
+
+}
+
+
+/* ============================================================
+   CONTENT
+   ============================================================ */
+
+.venues-content {
+
+  position: relative;
+
+  z-index: 2;
+
+}
+
+
+/* ============================================================
+   TITLE
+   ============================================================ */
+
+.venues-title {
+
+  margin-bottom: 65px;
+
+}
+
+
+.venues-title h2 {
+
+  margin-top: 18px;
+
+  font-family: var(--serif);
+
+  font-size: 21vw;
+
+  font-weight: 400;
+
+  line-height: 0.84;
+
+  letter-spacing: -0.055em;
+
+}
+
+
+.venues-title h2 em {
+
+  font-style: italic;
+
+}
+
+
+/* ============================================================
+   VENUE GRID
+   ============================================================ */
+
+.venue-grid {
+
+  display: grid;
+
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+
+  gap: 30px;
+
+  align-items: start;
+
+}
+
+
+/* ============================================================
+   VENUE CARD
+   ============================================================ */
+
+.venue-card {
+
+  color: #282522;
+
+  background: #e8e2dc;
+
+  overflow: hidden;
+
+}
+
+
+/* ============================================================
+   VENUE PHOTO
+   ============================================================ */
+
+.venue-card-photo {
+
+  height: 430px;
+
+  overflow: hidden;
+
+}
+
+
+.venue-card-photo img {
+
+  width: 100%;
+
+  height: 100%;
+
+  object-fit: cover;
+
+  display: block;
+
+  transition:
+    transform 1.2s cubic-bezier(.16,1,.3,1);
+
+}
+
+
+.venue-card:hover .venue-card-photo img {
+
+  transform: scale(1.05);
+
+}
+
+
+/* ============================================================
+   VENUE INFORMATION
+   ============================================================ */
+
+.venue-card-info {
+
+  padding: 30px 30px 32px;
+
+}
+
+
+/* ============================================================
+   EVENT TYPE
+   ============================================================ */
+
+.venue-type {
+
+  margin: 0;
+
+  font-size: 7px;
+
+  letter-spacing: 0.28em;
+
+  opacity: 0.5;
+
+}
+
+
+/* ============================================================
+   VENUE NAME
+   ============================================================ */
+
+.venue-card h3 {
+
+  margin: 16px 0 20px;
+
+  font-family: var(--serif);
+
+  font-size: 42px;
+
+  font-weight: 400;
+
+  line-height: 0.95;
+
+  letter-spacing: -0.04em;
+
+}
+
+
+/* ============================================================
+   ADDRESS
+   ============================================================ */
+
+.venue-address {
+
+  display: flex;
+
+  align-items: flex-start;
+
+  gap: 9px;
+
+  max-width: 290px;
+
+  font-size: 10px;
+
+  line-height: 1.6;
+
+  opacity: 0.6;
+
+}
+
+
+.venue-address svg {
+
+  flex-shrink: 0;
+
+  margin-top: 1px;
+
+}
+
+
+/* ============================================================
+   EVENT TIME
+   ============================================================ */
+
+.venue-event-time {
+
+  margin-top: 38px;
+
+}
+
+
+.venue-event-time span {
+
+  display: block;
+
+  font-family: var(--serif);
+
+  font-size: clamp(58px, 6vw, 92px);
+
+  font-weight: 400;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.055em;
+
+}
+
+
+/* ============================================================
+   EVENT DATE
+   ============================================================ */
+
+.venue-event-date {
+
+  margin: 14px 0 0;
+
+  font-size: 14px;
+
+  letter-spacing: 0.22em;
+
+  text-transform: uppercase;
+
+  opacity: 0.55;
+
+}
+
+
+/* ============================================================
+   MAP LINK
+   ============================================================ */
+
+.map-link {
+
+  display: inline-flex;
+
+  align-items: center;
+
+  gap: 10px;
+
+  margin-top: 30px;
+
+  padding: 25px 16px;
+
+  border:
+    1px solid rgba(40,37,34,0.4);
+
+  color: #282522;
+
+  text-decoration: none;
+
+  font-size: 12px;
+
+  letter-spacing: 0.25em;
+
+  transition:
+
+    background 0.3s ease,
+
+    color 0.3s ease,
+
+    gap 0.3s ease;
+
+}
+
+
+.map-link:hover {
+
+  background: #282522;
+
+  color: white;
+
+  gap: 14px;
+
+}
+
+
+/* ============================================================
+   TABLET
+   ============================================================ */
+
+@media (max-width: 900px) {
+
+  .venues-section {
+
+    padding: 80px 5% 70px;
+
+  }
+
+
+  .venues-title {
+
+    margin-bottom: 50px;
+
+  }
+
+
+  .venue-grid {
+
+    gap: 20px;
+
+  }
+
+
+  .venue-card-photo {
+
+    height: 360px;
+
+  }
+
+
+  .venue-card-info {
+
+    padding: 25px;
+
+  }
+
+
+  .venue-card h3 {
+
+    font-size: 34px;
+
+  }
+
+
+  .venue-event-time span {
+
+    font-size: clamp(52px, 7vw, 72px);
+
+  }
+
+}
+
+
+/* ============================================================
+   MOBILE
+   ============================================================ */
+
+@media (max-width: 650px) {
+
+  .venues-section {
+
+    padding: 70px 6% 60px;
+
+  }
+
+
+  .venues-title {
+
+    margin-bottom: 42px;
+
+  }
+
+
+  .venues-title h2 {
+
+    font-size: 24vw;
+
+  }
+
+
+  /* ONE CARD BELOW THE OTHER */
+
+  .venue-grid {
+
+    grid-template-columns: 1fr;
+
+    gap: 45px;
+
+  }
+
+
+  /* PHOTO */
+
+  .venue-card-photo {
+
+    height: 330px;
+
+  }
+
+
+  /* INFORMATION */
+
+  .venue-card-info {
+
+    padding: 25px 22px 28px;
+
+  }
+
+
+  /* VENUE NAME */
+
+  .venue-card h3 {
+
+    margin: 14px 0 18px;
+
+    font-size: 35px;
+
+  }
+
+
+  /* ADDRESS */
+
+  .venue-address {
+
+    font-size: 10px;
+
+    max-width: 250px;
+
+  }
+
+
+  /* BIG TIME */
+
+  .venue-event-time {
+
+    margin-top: 34px;
+
+  }
+
+
+  .venue-event-time span {
+
+    font-size: 64px;
+
+  }
+
+
+  /* DATE */
+
+  .venue-event-date {
+
+    margin-top: 12px;
+
+    font-size: 14px;
+
+    letter-spacing: 0.18em;
+
+  }
+
+
+  /* MAP */
+
+  .map-link {
+
+    margin-top: 25px;
+
+  }
+
+}
+
+
+/* ============================================================
+   SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 400px) {
+
+  .venues-section {
+
+    padding-left: 5%;
+
+    padding-right: 5%;
+
+  }
+
+
+  .venue-card-photo {
+
+    height: 290px;
+
+  }
+
+
+  .venue-card-info {
+
+    padding: 22px 20px 25px;
+
+  }
+
+
+  .venue-card h3 {
+
+    font-size: 31px;
+
+  }
+
+
+  .venue-event-time span {
+
+    font-size: 58px;
+
+  }
+
+}
+
+
+
+/* ============================================================
+   DRESS CODE
+   ============================================================ */
+
+.dress-section {
+  position: relative;
+
+  min-height: 88svh;
+
+  display: flex;
+
+  align-items: center;
+  justify-content: center;
+
+  overflow: hidden;
+
+  color: white;
+
+  text-align: center;
+}
+
+.dress-photo {
+  position: absolute;
+  inset: 0;
+
+  background-image: url("/images/dress.jpg");
+
+  background-size: cover;
+  background-position: center;
+}
+
+.dress-overlay {
+  position: absolute;
+  inset: 0;
+
+  background:
+    rgba(26,22,19,0.65);
+}
+
+.dress-content {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 370px;
+
+  padding: 75px 25px;
+}
+
+.dress-content h2 {
+  margin-top: 18px;
+
+  font-family: var(--serif);
+
+  font-size: 22vw;
+
+  font-weight: 400;
+
+  line-height: 0.85;
+
+  letter-spacing: -0.06em;
+}
+
+.dress-line {
+  width: 55px;
+  height: 1px;
+
+  margin: 38px auto;
+
+  background: rgba(255,255,255,0.5);
+}
+
+.dress-style {
+  font-family: var(--serif);
+
+  font-size: 27px;
+}
+
+.dress-subtitle {
+  font-family:  "Didot", "Bodoni MT", "Cochin", "Georgia", serif;
+
+  margin-top: 7px;
+
+  font-size: 30px;
+
+  
+}
+
+.dress-description {
+  max-width: 300px;
+
+  margin: 30px auto 0;
+
+  font-size: 10px;
+
+  line-height: 1.9;
+
+  opacity: 0.65;
+}
+
+.dress-content .dress-code-note {
+  margin-top: 30px;
+
+  font-size: 12px;
+
+  letter-spacing: 0.28em;
+
+  opacity: 0.55;
+}
+
+/* ============================================================
+   EVENT INFORMATION
+   ============================================================ */
+
+.event-info-boxes {
+  width: calc(100% - 32px);
+
+  max-width: 430px;
+
+  margin: 38px auto 65px;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+
+  gap: 25px;
+}
+
+.event-info-box {
+  width: 100%;
+
+  min-height: 455px;
+
+  padding: 45px 20px;
+
+  background: #465f91;
+
+  color: #ffffff;
+
+  border:
+    1px solid rgba(190,145,125,0.85);
+
+  display: flex;
+
+  flex-direction: column;
+
+  justify-content: center;
+
+  align-items: center;
+
+  text-align: center;
+
+  position: relative;
+
+  overflow: hidden;
+
+  box-shadow:
+    0 20px 50px rgba(0,0,0,0.14);
+
+  transition:
+    transform 0.45s ease,
+    box-shadow 0.45s ease;
+}
+
+.event-info-box::before {
+  content: "";
+
+  position: absolute;
+
+  width: 250px;
+  height: 250px;
+
+  border-radius: 50%;
+
+  top: -145px;
+  right: -100px;
+
+  background:
+    rgba(255,255,255,0.055);
+
+  filter: blur(10px);
+
+  pointer-events: none;
+}
+
+.event-info-box::after {
+  content: "";
+
+  position: absolute;
+
+  width: 180px;
+  height: 180px;
+
+  border-radius: 50%;
+
+  bottom: -115px;
+  left: -75px;
+
+  background:
+    rgba(20,40,80,0.12);
+
+  filter: blur(12px);
+
+  pointer-events: none;
+}
+
+.event-info-box:hover {
+  transform: translateY(-4px);
+
+  box-shadow:
+    0 25px 55px rgba(0,0,0,0.18);
+}
+
+.event-info-type {
+  position: relative;
+  z-index: 2;
+
+  margin: 0 0 27px;
+
+  font-family: var(--sans);
+
+  font-size: 8px;
+
+  line-height: 1.2;
+
+  letter-spacing: 0.28em;
+
+  font-weight: 500;
+
+  text-transform: uppercase;
+
+  white-space: nowrap;
+}
+
+.event-info-day {
+  position: relative;
+  z-index: 2;
+
+  margin: 0;
+
+  font-family: var(--serif);
+
+  font-size: 39px;
+
+  line-height: 1.05;
+
+  font-weight: 400;
+}
+
+.event-info-date {
+  position: relative;
+  z-index: 2;
+
+  margin: 11px 0 0;
+
+  font-family: var(--serif);
+
+  font-size: 29px;
+
+  line-height: 1.15;
+
+  font-weight: 400;
+
+  white-space: nowrap;
+}
+
+.event-info-time {
+  position: relative;
+  z-index: 2;
+
+  margin: 18px 0 0;
+
+  font-family: var(--sans);
+
+  font-size: 8px;
+
+  line-height: 1;
+
+  letter-spacing: 0.25em;
+
+  text-transform: uppercase;
+
+  opacity: 0.82;
+}
+
+.event-info-line {
+  position: relative;
+  z-index: 2;
+
+  width: 42px;
+  height: 1px;
+
+  flex-shrink: 0;
+
+  background:
+    rgba(255,255,255,0.4);
+
+  margin: 27px 0 22px;
+}
+
+.event-info-venue {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 290px;
+
+  margin: 0;
+
+  font-family: var(--serif);
+
+  font-size: 23px;
+
+  line-height: 1.12;
+
+  font-weight: 400;
+
+  overflow-wrap: break-word;
+}
+
+.event-info-location {
+  position: relative;
+  z-index: 2;
+
+  width: 100%;
+
+  max-width: 290px;
+
+  margin: 8px 0 0;
+
+  font-family: var(--serif);
+
+  font-size: 17px;
+
+  line-height: 1.25;
+
+  opacity: 0.82;
+
+  overflow-wrap: break-word;
+}
+
+
+/* ============================================================
+   FINAL
+   ============================================================ */
+
+.final-section {
+  min-height: 80svh;
+
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  padding: 100px 22px;
+
+  background: #eae5df;
+
+  text-align: center;
+}
+
+.final-names {
+  display: flex;
+
+  flex-direction: column;
+
+  align-items: center;
+  justify-content: center;
+
+  gap: 12px;
+
+  margin-top: 30px;
+
+  font-family: var(--serif);
+
+  font-size: 21vw;
+
+  line-height: 0.8;
+
+  letter-spacing: -0.06em;
+}
+
+.final-names i {
+  font-size: 38px;
+
+  font-style: italic;
+}
+
+.final-date {
+  margin-top: 30px;
+
+  font-size: 8px;
+
+  letter-spacing: 0.3em;
+
+  opacity: 0.5;
+}
+
+.final-heart {
+  margin-top: 60px;
+
+  font-size: 16px;
+
+  opacity: 0.35;
+}
+
+
+/* ============================================================
+   VERY SMALL PHONES
+   ============================================================ */
+
+@media (max-width: 380px) {
+
+  .hero-content {
+    padding: 0 14px;
+  }
+
+  .hero-title-wrapper h1 {
+    font-size: 60px;
+    letter-spacing: -0.08em;
+
+  }
+
+  .hero-couple {
+    gap: 9px;
+    font-size: 7px;
+  }
+
+  .hero-couple i {
+    font-size: 22px;
+  }
+
+  .welcome-content h2 {
+    font-size: 21vw;
+  }
+
+  .welcome-description {
+    font-size: 10px;
+  }
+
+  .couple-photo-content h2 {
+    font-size: 19vw;
+  }
+
+  .name-reveal h2 {
+    font-size: 22vw;
+  }
+
+  .countdown-grid {
+    gap: 7px;
+  }
+
+  .countdown-glass {
+    min-height: 125px;
+  }
+
+  .count-number {
+    font-size: 46px;
+  }
+
+  .gallery-collage {
+    min-height: 1250px;
+  }
+
+  .gallery-large {
+    height: 350px;
+  }
+
+  .gallery-small {
+    top: 255px;
+    height: 210px;
+  }
+
+  .gallery-tall {
+    top: 500px;
+    height: 320px;
+  }
+
+  .gallery-wide {
+    top: 650px;
+    height: 240px;
+  }
+
+  .gallery-small-two {
+    top: 875px;
+    height: 210px;
+  }
+
+  .gallery-final {
+    top: 970px;
+    height: 290px;
+  }
+
+  .event-info-box {
+    min-height: 440px;
+  }
+
+  .event-info-day {
+    font-size: 36px;
+  }
+
+  .event-info-date {
+    font-size: 27px;
+  }
+
+  .event-info-venue {
+    font-size: 21px;
+  }
+
+  .event-info-location {
+    font-size: 16px;
+  }
+
+  .final-names {
+    font-size: 20vw;
+  }
+}
+
+
+/* ============================================================
+   REDUCED MOTION
+   ============================================================ */
+
+@media (prefers-reduced-motion: reduce) {
+
+  html {
+    scroll-behavior: auto;
+  }
+
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+  }
+}
+
+
